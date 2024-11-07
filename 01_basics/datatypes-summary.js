@@ -116,22 +116,27 @@ defined at compile-time and do not allow type changes at runtime.
  */
 
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+// Stack (Primitive), Heap (Non-Primitive)
 
+let myName = "Udbhav"
+let anotherName = myName;
+anotherName = "golu"
 
+console.log(myName);
+console.log(anotherName);
 
+let userOne =  {
+  email : "abc@gmail.com",
+  upt:"uow@ybl"
+}
+console.log(userOne.email);
 
+let userTwo = userOne
 
-// JavaScript is a dynamically typed language. This means:
+userTwo.email = "xyz@gmail.com"
 
-// Variables are not bound to a specific type, and their types can change at runtime.
-// You don't need to declare a type when you declare a variable. The type is determined based on the value assigned to it.
-// For example:
-
-// javascript
-// Copy code
-// let x = 10;        // x is a number
-// x = "Hello";       // x is now a string
-// In contrast, statically typed languages (like TypeScript, Java, or C++) require variable types to be defined at compile-time and do not allow type changes at runtime.
-
+console.log(userOne.email);
+console.log(userTwo.email);
 
